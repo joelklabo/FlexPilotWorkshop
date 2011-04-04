@@ -52,11 +52,11 @@ Step By Step Setup Instructions
 
     java -jar selenium-server-standalone.jar -userExtensions user-extensions.js
 
-This should start the Selenium server without any errors, it will fail if there is already and instance of the server running.
-22. If everything is good at this point go into your flexpilot folder and run your test that you just exported:
+22. This should start the Selenium server without any errors, it will fail if there is already and instance of the server running.
+23. If everything is good at this point go into your flexpilot folder and run your test that you just exported:
 
     python yourtest.py
 
-23. This should launch a browser, run your test, and close the browser. It is likely that this test will fail at this point due to the fact that flex appends a random integer to the end of component names each time you compile your swf. So, If you have compiled your swf again for some reason since you saved your test the locators for the components will now probably be wrong, and the test will fail. In order to deal with this you can replace the random integers in yourtest.py with a wildcard, represented by and asterisk (*). 
-24. Replace all random integers with an asterisk and run the test again. This should now work fine and if it doesn't something else is likely wrong.
-25. Test a bunch of stuff and you're done!
+24. This should launch a browser, run your test, and close the browser. It is likely that this test will fail at this point due to the fact that flex appends a random integer to the end of component names each time you compile your swf. So, If you have compiled your swf again for some reason since you saved your test the locators for the components will now probably be wrong, and the test will fail. In order to deal with this you can replace the random integers in yourtest.py with a wildcard, represented by and asterisk (*). 
+25. Replace all random integers with an asterisk and run the test again. This should now work fine and if it doesn't something else is likely wrong.
+26. Test a bunch of stuff and you're done!
