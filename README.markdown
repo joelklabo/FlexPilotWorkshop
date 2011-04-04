@@ -42,21 +42,21 @@ Step By Step Setup Instructions
 
     document.getElementsByName[0].fp_click
 
-15  This should output 'function' which means that everything is set up and we can start testing. If it returns undefined then something went wrong.
-14. Go to the [SeleniumHQ]("http://seleniumhq.org/downloads") page and download the Selenium IDE v1.0.10, as well as Selenium Server v2.0b3.
-15. Now go to the [FlexPilot X]("http://github.com/admc/flex-pilot-x") repo and download plugin v0.83 as well as the Python client driver which is in the client folder under Python and user-extensions.js.
-16. Put the selenium.py and user-extensions.js files you just downloaded into your flexpilot folder.
-17. Now open up the Selenium IDE and try recording a test. Click, Type, etc. Once this is working somewhat add a few commands to the test at the very beginning. First add 'open /' which will reload the page at the beginning of the test. Second, add the waitForFlexRead command which prevents the test from running until Flex is ready to go. Without this the tests just pass.
-18. Now once your test is working cick File > Export Test Case as > Python save this file in your flexpilot folder.
-19. You should now be ready to run the test from Selenium RC, on the cammand line enter your flexpilot folder and type:
+15. This should output 'function' which means that everything is set up and we can start testing. If it returns undefined then something went wrong.
+16. Go to the [SeleniumHQ]("http://seleniumhq.org/downloads") page and download the Selenium IDE v1.0.10, as well as Selenium Server v2.0b3.
+17. Now go to the [FlexPilot X]("http://github.com/admc/flex-pilot-x") repo and download plugin v0.83 as well as the Python client driver which is in the client folder under Python and user-extensions.js.
+18. Put the selenium.py and user-extensions.js files you just downloaded into your flexpilot folder.
+19. Now open up the Selenium IDE and try recording a test. Click, Type, etc. Once this is working somewhat add a few commands to the test at the very beginning. First add 'open /' which will reload the page at the beginning of the test. Second, add the waitForFlexRead command which prevents the test from running until Flex is ready to go. Without this the tests just pass.
+20. Now once your test is working cick File > Export Test Case as > Python save this file in your flexpilot folder.
+21. You should now be ready to run the test from Selenium RC, on the cammand line enter your flexpilot folder and type:
 
     java -jar selenium-server-standalone.jar -userExtensions user-extensions.js
 
 This should start the Selenium server without any errors, it will fail if there is already and instance of the server running.
-20. If everything is good at this point go into your flexpilot folder and run your test that you just exported:
+22. If everything is good at this point go into your flexpilot folder and run your test that you just exported:
 
     python yourtest.py
 
-21. This should launch a browser, run your test, and close the browser. It is likely that this test will fail at this point due to the fact that flex appends a random integer to the end of component names each time you compile your swf. So, If you have compiled your swf again for some reason since you saved your test the locators for the components will now probably be wrong, and the test will fail. In order to deal with this you can replace the random integers in yourtest.py with a wildcard, represented by and asterisk (*). 
-22. Replace all random integers with an asterisk and run the test again. This should now work fine and if it doesn't something else is likely wrong.
-23. Test a bunch of stuff and you're done!
+23. This should launch a browser, run your test, and close the browser. It is likely that this test will fail at this point due to the fact that flex appends a random integer to the end of component names each time you compile your swf. So, If you have compiled your swf again for some reason since you saved your test the locators for the components will now probably be wrong, and the test will fail. In order to deal with this you can replace the random integers in yourtest.py with a wildcard, represented by and asterisk (*). 
+24. Replace all random integers with an asterisk and run the test again. This should now work fine and if it doesn't something else is likely wrong.
+25. Test a bunch of stuff and you're done!
