@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!-- Simple example to demonstrate the TextArea control. -->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" applicationComplete="init()">
+
+  <mx:Script>
+    <![CDATA[
+    
+      import flash.events.Event;
+      import org.flex_pilot.FPBootstrap;
+
+      private function init():void {
+        FPBootstrap.flex_pilotLibPath = "FlexPilot-3-stable.swf";
+        FPBootstrap.init(stage);
+      }
+
+      private function printMessage(event:Event):void  {
+        message.text += event.target.label + " pressed" + "\n";
+      }
+      
+    ]]>
+  </mx:Script>
+  
+  <mx:TextInput id="src" text="Hello World!"/>
+  <mx:Button label="Button" click="dest.text = src.text"/>
+  <mx:TextInput id="dest"/>
+  
+  <mx:VBox>
+      <mx:CheckBox id="milkCB" label="milk"/>
+      <mx:CheckBox id="eggsCB" label="eggs"/>
+      <mx:CheckBox id="breadCB" label="bread"/>
+  </mx:VBox>
+
+  
+
+  <mx:VBox>
+     <mx:Button label="Default Button" click="printMessage(event);"/>
+  </mx:VBox>
+
+  <mx:TextArea id="message" text="" editable="false" height="50%" width="50%"
+           color="#0000FF"/>
+
+
+ </mx:Application> 
