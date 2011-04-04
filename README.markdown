@@ -42,7 +42,7 @@ Step By Step Setup Instructions
 
     document.getElementsByName[0].fp_click
 
-  This should output 'function' which means that everything is set up and we can start testing. If it returns undefined then something went wrong.
+15  This should output 'function' which means that everything is set up and we can start testing. If it returns undefined then something went wrong.
 14. Go to the [SeleniumHQ]("http://seleniumhq.org/downloads") page and download the Selenium IDE v1.0.10, as well as Selenium Server v2.0b3.
 15. Now go to the [FlexPilot X]("http://github.com/admc/flex-pilot-x") repo and download plugin v0.83 as well as the Python client driver which is in the client folder under Python and user-extensions.js.
 16. Put the selenium.py and user-extensions.js files you just downloaded into your flexpilot folder.
